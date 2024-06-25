@@ -67,7 +67,7 @@ public:
   }
 
   constexpr reference at(size_type pos) {
-    if (pos < 0 || pos >= N) {
+    if (pos >= size()) {
       throw std::out_of_range("index out of bounds");
     }
     return _data[pos];
