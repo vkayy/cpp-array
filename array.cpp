@@ -2,6 +2,7 @@
 #include <iterator>
 #include <stdexcept>
 
+namespace vk {
 template <class T, std::size_t N> struct array {
 public:
   typedef T value_type;
@@ -156,3 +157,4 @@ constexpr bool operator>=(const std::array<T, N> &lhs,
                           const std::array<T, N> &rhs) {
   return lhs > rhs || lhs == rhs;
 }
+} // namespace vk
